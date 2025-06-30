@@ -1,1 +1,1 @@
-# Insightful-Rest
+# Insightful Rest
