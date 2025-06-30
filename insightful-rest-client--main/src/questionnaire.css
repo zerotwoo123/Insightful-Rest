@@ -1,0 +1,109 @@
+/* Make the navbar fixed at the top */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.questionnaire-container {
+    background-image: url('/public/bgmain.png');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; /* Change to min-height */
+    padding: 20px;
+    padding-top: 80px; /* Space for the fixed navbar */
+    position: relative; 
+    overflow-y: auto; /* Allow vertical scrolling */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+}
+
+.questionnaire-box {
+    background-color: white; /* White background for the box */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%; /* Make the box responsive */
+    max-width: 1200px; /* Maximum width */
+    margin-left: 20px;
+  
+}
+
+
+.validation-message {
+    color: red;
+    margin-left: 10px; /* Space between dropdown and message */
+    white-space: nowrap; /* Prevents the message from wrapping */
+    align-self: center; /* Aligns message vertically with the dropdown */
+}
+
+.error {
+    border: 1px solid red; /* Red border for error */
+}
+
+/* Loading Spinner Styles */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-spinner {
+    border: 5px solid lightgray; /* Light gray border */
+    border-top: 5px solid blue; /* Blue top */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.no-scroll {
+    overflow: hidden; /* Disable scrolling when loading */
+}
+
+/* Prevents dropdown resizing */
+.form-select {
+    flex: 1 0 auto; /* Keep dropdown size */
+    min-width: 200px; /* Set minimum width */
+}
+
+.title-underline {
+    width: 50%; /* Full width of the container */
+    height: 2px; /* Height of the line */
+    background-color: #000; /* Color of the line */
+    margin: 10px auto; /* Space above and below the line */
+}
+
+.general-question {
+    display: inline; /* Ensures it stays on one line */
+    font-size: 1.0rem; /* Adjust the font size as needed */
+    /* You can add more styles like color, margin, etc. */
+}
+
+.radio-label {
+    margin-left: 8px; /* Adjust the spacing as needed */
+}
+

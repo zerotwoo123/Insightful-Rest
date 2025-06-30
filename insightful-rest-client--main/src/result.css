@@ -1,0 +1,147 @@
+/* result.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif no-repeat;
+    background: url('/public/bgmain.png') no-repeat center center fixed;
+    background-size: cover;
+}
+.result-component-container {
+    padding: 30px;
+    max-width: 800px;
+    margin: 50px auto;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+}
+
+.result-component-container h1,
+.result-component-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.result-component-container h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.result-component-stress-level {
+    background-color: #eaf4fc;
+    padding: 20px;
+    border: 2px solid #b3d7ff;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.result-component-recommendations {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.result-component-recommendations h2 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.result-component-recommendations p {
+    margin: 0;
+    padding: 0;
+}
+
+.result-component-back-btn {
+    display: block; /* Makes the button take up its own block line */
+    margin: 20px auto; /* Centers the button horizontally */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: 200px; /* Optional: Restrict button width for better alignment */
+}
+
+.result-component-back-btn:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s;
+}
+
+.result-component-loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.result-component-loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.result-component-loading-text {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+    .result-component-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .result-component-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .result-component-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .result-component-recommendations {
+        font-size: 0.9rem;
+    }
+
+    .result-component-back-btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
